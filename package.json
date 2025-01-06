@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@tabler/icons-vue": "^3.5.0",
-    "@vueuse/core": "^10.9.0",
+    "@vueuse/core": "^12.3.0",
     "axios": "^1.7.2",
     "crypto-js": "^4.2.0",
     "json-fn": "^1.1.1",
