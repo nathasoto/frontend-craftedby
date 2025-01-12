@@ -51,9 +51,9 @@ const addUser = async () => {
 };
 
 // Function to edit an existing user
-const editUser = async (user) => {
-  // Implement logic to edit a user
-};
+// const editUser = async (user) => {
+//   // Implement logic to edit a user
+// };
 
 // Function to delete a user
 const deleteUser = async (userId) => {

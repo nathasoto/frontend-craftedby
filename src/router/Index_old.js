@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import RoleBasedView from '@/views/RoleBasedView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +8,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: RoleBasedView
     },
     {
       path: '/e-boutique',
@@ -25,7 +26,7 @@ const router = createRouter({
     {
       path: '/account',
       name: 'account',
-      component: () => import('../views/AccountView.vue')
+      component: () => import('../views/RoleBasedView.vue')
     },
     {
       path: '/product',
@@ -55,12 +56,22 @@ const router = createRouter({
     {
       path: '/commande',
       name: 'commande',
-      component: () => import('../views/CommandeView.vue')
+      component: () => import('../views/CommandView.vue')
     },
     {
       path: '/payment',
       name: 'payment',
       component: () => import('../views/PaymentView.vue')
+    },
+    {
+      path: '/customize-cookies',
+      name: 'customize-cookies',
+      component: () => import('../views/CustomizeCookies.vue')
+    },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import('../views/PrivacyPolicy.vue')
     },
 
 

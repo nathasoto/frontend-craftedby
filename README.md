@@ -39,6 +39,7 @@ Craftedby is an innovative web application that combines an e-commerce platform 
 - Vue.js 3
 - Node.js
 - Pinia (state management)
+- axios
 - Vue Router (routing)
 - Vite (build tool)
 - ESLint (linter)

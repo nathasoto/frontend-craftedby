@@ -2,7 +2,8 @@
 import axios from '@/plugins/Axios.js';
 import { ref, onMounted } from 'vue';
 
-
+// import { inject } from 'vue';
+// const axios = inject('$axios')
 
 // Defines a reactive variable for storing products
 const products = ref([]);

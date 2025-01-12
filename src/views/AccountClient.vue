@@ -1,8 +1,10 @@
 <script setup>
+
 </script>
 
 <template>
-  <router-view/>
+  hola
+
 </template>
 
 <style scoped>

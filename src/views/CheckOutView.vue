@@ -1,6 +1,5 @@
 <script setup>
-import Navbar_home from '@/components/navbar/navbarHome.vue'
-import Footer_home from '@/components/FooterHome.vue'
+
 import ValidationCart from '@/components/ValidationCart.vue'
 import AddressForm from '@/components/AddressForm.vue'
 
@@ -8,11 +7,6 @@ import AddressForm from '@/components/AddressForm.vue'
 </script>
 
 <template>
-  <body>
-  <header>
-    <Navbar_home />
-
-  </header>
 
   <main>
 
@@ -29,8 +23,4 @@ import AddressForm from '@/components/AddressForm.vue'
 
   </main>
 
-  <footer>
-    <Footer_home />
-  </footer>
-  </body>
 </template>

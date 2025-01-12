@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import IconUser from '@/components/icons/iconUser.vue'
+import IconLogin from '@/components/icons/iconLogin.vue'
 import IconCart from '@/components/icons/iconCart.vue'
 const isMenuOpen = ref(false);
 
@@ -28,7 +28,7 @@ onBeforeUnmount(() => {
 <template>
   <nav class="navbar bg-base-100 shadow-lg">
     <div class="flex-none mx-auto">
-      <a href="/account" class="font-bold text-lg text-gray-800">
+      <a href="/" class="font-bold text-lg text-gray-800">
         <img src="../../assets/logo.png" alt="Logo" class="w-auto h-auto max-w-xs max-h-12">
       </a>
     </div>
@@ -45,14 +45,14 @@ onBeforeUnmount(() => {
     <!-- Menu for desktop -->
     <div class="flex-none gap-2 hidden md:flex">
       <IconCart />
-      <IconUser />
+      <IconLogin />
     </div>
 
     <!-- Dropdown menu for mobile -->
     <div v-if="isMenuOpen" id="menu" class="md:hidden bg-white shadow-md p-4 absolute top-0 left-0 w-full">
       <div class="flex flex-col gap-2">
         <IconCart />
-        <IconUser />
+        <IconLogin />
       </div>
     </div>
   </nav>

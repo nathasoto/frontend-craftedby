@@ -1,3 +1,22 @@
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+// Data for payment information
+const cardNumber = ref('');
+const expirationDate = ref('');
+const cvv = ref('');
+
+const router = useRouter();
+
+
+// Function to handle form submission
+const handleSubmit = () => {
+  router.push('/Command');
+};
+
+
+</script>
 <template>
   <!-- Form for payment information -->
   <form @submit.prevent="handleSubmit" class="max-w-lg mx-auto mt-8 p-6 bg-white shadow-md rounded">
@@ -21,70 +40,14 @@
                placeholder="123" />
       </div>
     </div>
-    <button type="submit" class="mt-8 bg-blue-500 text-white py-2 px-4 rounded">Payer</button>
+    <button type="submit" class="mt-8 bg-customGreen text-black py-2 px-4 rounded">Continuer</button>
 
-    <!-- Message shown when redirecting is true -->
-    <div v-if="redirecting" class="bg-gray-200 p-3 rounded-lg mt-4">
-      Redirection en cours...
-    </div>
 
-    <!-- Success Message -->
-    <div v-if="paymentSuccess" class="bg-green-200 p-6 rounded-lg mt-4 text-center text-2xl font-bold">
-      Paiement réussi !
-      <br />
-      Redirection vers la page d'accueil...
-    </div>
+
   </form>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
 
-// Data for payment information
-const cardNumber = ref('');
-const expirationDate = ref('');
-const cvv = ref('');
-
-const router = useRouter();
-const redirecting = ref(false);
-const paymentSuccess = ref(false); // State to manage payment success message
-
-// Function to handle form submission
-const handleSubmit = () => {
-  // Simulate payment logic here
-  simulatePayment()
-      .then(() => {
-        // Clear localStorage data (if needed)
-        localStorage.clear();
-
-        // Set redirecting to true to show the redirect message
-        redirecting.value = true;
-
-        // After 2 seconds, navigate to the payment page
-        setTimeout(() => {
-          paymentSuccess.value = true; // Show payment success message
-          redirecting.value = false; // Hide redirection message
-          router.push('/'); // Redirect to Home page
-        }, 2000); // Wait 2 seconds before redirecting
-      })
-      .catch(error => {
-        console.error('Error processing payment:', error);
-        // Handle payment error if needed
-      });
-};
-
-// Function to simulate a successful payment (replace with actual payment logic)
-const simulatePayment = () => {
-  return new Promise((resolve, reject) => {
-    // Simulate a delay (replace with actual payment API call)
-    setTimeout(() => {
-      // Simulate success (you can also simulate failure by calling reject())
-      resolve();
-    }, 1000); // Simulate 1 second delay
-  });
-};
-</script>
 
 <style scoped>
 /* Additional styles for the success message */

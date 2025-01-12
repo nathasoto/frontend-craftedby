@@ -3,7 +3,7 @@ const urlApi = import.meta.env.VITE_API_URL
 const urlSanctum = import.meta.env.VITE_SANCTUM_URL
 
 const axiosInstance = axios.create({
-    baseURL: urlApi, // Base URL of your Laravel API
+    baseURL: urlApi, // Base URL Laravel API
     withCredentials: true, // Allow sending cookies along with the request (necessary for CSRF cookie)
 });
 
@@ -19,6 +19,7 @@ axiosInstance.get(urlSanctum).then(response => {
 
 // Interceptor to add Authorization header
 axiosInstance.interceptors.request.use(config => {
+
     // Retrieve the auth token from local storage
     const token = localStorage.getItem('auth_token');
 

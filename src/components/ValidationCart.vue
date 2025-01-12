@@ -19,18 +19,18 @@ const cartStore = useCartStore();
             <img :src="item.image" alt="Product Image" class="h-12 w-12 object-cover">
           </div>
           <!-- Product details -->
-          <div class="flex-1 ml-4 text-right">
-            <h3 class="text-lg font-semibold">{{ item.title }}</h3>
-            <p class="text-gray-500">{{ item.price }}$ x {{ item.quantity }}</p>
-            <p class="text-gray-500">Color : {{ item.color.name }}</p>
-            <p class="text-gray-500"> Size :{{ item.size.name }}</p>
+          <div class="flex-1 ml-4 text-right mr-2.5">
+            <h3 class="text-lg font-hyperlegible  font-bold">{{ item.title }}</h3>
+            <p class="font-hyperlegible 0">{{ item.price }} € x {{ item.quantity }}</p>
+            <p class="font-hyperlegible ">Couleur : {{ item.color.name }}</p>
+            <p class="font-hyperlegible "> Dimensions:{{ item.size.name }}</p>
           </div>
         </li>
       </ul>
       <!-- Cart total -->
       <div class="border-t border-gray-200 px-4 py-4 sm:px-6 flex justify-between items-center">
         <p class="text-lg font-semibold">Total:</p>
-        <p class="text-lg font-semibold">{{ cartStore.totalPrice }}$</p>
+        <p class="text-lg font-semibold">{{ cartStore.totalPrice }} €</p>
       </div>
 
 
